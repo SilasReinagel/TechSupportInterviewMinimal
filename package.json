@@ -1,0 +1,16 @@
+{
+  "name": "accounts-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install": "concurrently \"cd webapp && npm install\" \"cd backend && npm install\"",
+    "dev": "npm run install && concurrently \"cd backend && npm run dev\" \"cd webapp && npm run dev\"",
+    "launch": "concurrently \"npm run dev\" \"sleep 10 && open http://localhost:4617\""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.7"
+  }
+}
